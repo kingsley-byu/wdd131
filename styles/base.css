@@ -1,0 +1,123 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+}
+
+
+header {
+    background-color: #2f5d7c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+
+main h1 {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+
+.card h3 {
+    background-color: #2f5d7c;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -15px -15px 10px -15px;
+    text-align: center;
+}
+
+.card img {
+    width: 150px;
+    margin-top: 10px;
+}
+
+
+.card ul {
+    padding-left: 20px;
+}
+
+.card li {
+    margin: 10px 0;
+}
+
+
+.card a {
+    color: blue;
+}
+
+.maintain{
+    display: flex;
+    justify-content: space-around;
+}
+.card a:hover {
+    text-decoration: underline;
+}
+.about-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+.about-image img{
+    width: 150px;
+    border-radius: 5px;
+
+}
+
+
+
+footer {
+    background-color: #2f5d7c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
