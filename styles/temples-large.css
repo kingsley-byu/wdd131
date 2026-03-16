@@ -1,0 +1,19 @@
+@media (min-width: 700px){
+    #menu{
+        display: none;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .templeGallery{
+        grid-template-columns: repeat(3,1fr);
+
+    }
+
+    figure img{
+        width: 150px;
+    }
+}
