@@ -30,6 +30,7 @@ header{
     color:aliceblue;
     cursor: pointer;
     background-color: rgb(96, 96, 148);
+    border-radius: 5px;
 
 }
 
@@ -61,11 +62,11 @@ nav ul li a{
     display: grid;
     grid-template-columns: 1fr;
     width: 80%;
-    gap: 8px;
+    gap: 10px;
     margin: 0 auto;
     padding: 10px;
     border: 2px solid rgb(0,0,0,0.1);
-    border-radius: 5px;
+    border-radius: 8px;
     
 }
 
