@@ -11,7 +11,7 @@ body{
 
 
 header{
-    background-color: purple;
+    background-color: rgb(135, 102, 102);
     color: white;
     padding-top: 5px;
     margin-top: 2px;
@@ -70,6 +70,7 @@ nav ul li a{
     padding: 10px;
     border: 2px solid rgb(0,0,0,0.1);
     border-radius: 8px;
+    background-color: lemonchiffon;
     
 }
 
@@ -101,7 +102,7 @@ nav ul li a{
 
     footer{
         color: white;
-        background-color: purple;
+        background-color: rgb(135, 102, 102);
         border-radius: 8px;
     }
     
