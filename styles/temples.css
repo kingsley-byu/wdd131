@@ -64,7 +64,7 @@ nav ul li a{
 .templeGallery{
     display: grid;
     grid-template-columns: 1fr;
-    width: 50%;
+    width: 80%;
     gap: 10px;
     margin: 0 auto;
     padding: 10px;
