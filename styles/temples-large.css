@@ -1,4 +1,4 @@
-@media (min-width: 700px){
+@media (min-width: 600px){
     #menu{
         display: none;
     }
@@ -10,10 +10,11 @@
 
     .templeGallery{
         grid-template-columns: repeat(3,1fr);
+    
 
     }
 
-    figure img{
-        width: 150px;
-    }
+    
+    
+    
 }
