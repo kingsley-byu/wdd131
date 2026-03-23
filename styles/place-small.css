@@ -3,23 +3,25 @@
         position: static;
         width: auto ;
         border-radius: 0;
-        text-align: center;
+        text-align:var(--text-align);
+
         
         
     }
 
     .hero{
-        display: flex;
-        flex-direction: column;
-        margin: .2rem;
-        
-        
+        display: var(--display);
+        flex-direction: var(--flex-direction);
+        margin: .2rem;  
     }
     .data h2, .weather h2{
         font-size: 2.1rem;
         width: fit-content;
         background-color: var(--secondary-color);
         margin: 0 auto 0.6rem auto ;
+    }
+    .data{
+        border-bottom: 1px solid wheat;
     }
     header{
         font-size: 1.4rem;
@@ -33,8 +35,8 @@
         
     }
     .weather h2{
-        display: flex;
-        flex-direction: column;
+        display: var(--display);
+        flex-direction: var(--flex-direction);
         grid-gap: 0;
     }
 
@@ -42,8 +44,12 @@
         padding: .9rem;
 
     }
-    .weather img{
-        width: 90px;
-        
+
+    .hero img{
+        border-bottom: 3px solid red;
+    }
+    
+    weather h2::after{
+        content: none;
     }
 }

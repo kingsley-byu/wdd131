@@ -1,6 +1,9 @@
 :root{
     --primary-color:#c8102e;
     --secondary-color:white;
+    --display: flex;
+    --text-align: center;
+    --flex-direction: column;
 
 }
     
@@ -19,9 +22,15 @@ body{
 
 header, footer{
     background-color: var(--primary-color);
-    text-align: center;
+    text-align: var(--text-align);
     color: var(--secondary-color);
     padding: 1rem;
+    
+}
+
+header{
+    border-bottom:  8px solid #2e8b57;
+
 }
 footer{
     font-size: 0.9rem;
@@ -35,6 +44,7 @@ footer{
     width: 100%;
     display: block;
     height: auto;
+    
 
 }
 
@@ -55,7 +65,7 @@ footer{
 
 }
 .weather h2{
-    display: grid;
+    display: inline-block;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
 }
@@ -66,7 +76,7 @@ footer{
 }
 
 .weather h2, .data h2{ 
-    text-align: center;
+    text-align: var(--text-align);
     background-color: #2e8b57;
     padding: .5rem;
     border-radius: 3px;
@@ -82,4 +92,19 @@ footer{
     width: 50px;
     
 }
+
+.weather h2::after {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/weather.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+
 
