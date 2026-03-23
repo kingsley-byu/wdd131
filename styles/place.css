@@ -1,4 +1,8 @@
-/* :root*/
+:root{
+    --primary-color:#c8102e;
+    --secondary-color:white;
+
+}
     
 * {
     margin: 0;
@@ -14,9 +18,9 @@ body{
 }
 
 header, footer{
-    background-color: #c8102e;
+    background-color: var(--primary-color);
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
     padding: 1rem;
 }
 footer{
@@ -50,6 +54,11 @@ footer{
     
 
 }
+.weather h2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
 
 .weather{
     bottom: 200px;
@@ -69,3 +78,8 @@ footer{
     margin: 0.3rem 0;
     font-size: 0.9rem;
 }
+.weather img{
+    width: 50px;
+    
+}
+

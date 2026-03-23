@@ -18,7 +18,7 @@
     .data h2, .weather h2{
         font-size: 2.1rem;
         width: fit-content;
-        background-color: white;
+        background-color: var(--secondary-color);
         margin: 0 auto 0.6rem auto ;
     }
     header{
@@ -32,9 +32,18 @@
         
         
     }
+    .weather h2{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+    }
 
     footer{
         padding: .9rem;
 
+    }
+    .weather img{
+        width: 90px;
+        
     }
 }
