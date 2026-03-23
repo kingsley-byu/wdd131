@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="WDD131 - Dynamic Web Fundamentals - Osaruyi Kingsley Osawaru">
+    <meta name="author" content="Osaruyi Kingsley Osawaru">
+
+    <title>WDD 131 - Dynamic Web Fundamentals - Osaruyi Kingsley Osawaru</title>
+    <!--font reference-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Css reference-->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-small.css">
+
+
+    <script src="scripts/place.js" defer></script>
+    <body>
+        </head>
+        <header>
+            <h1>Barcelona</h1>
+        </header>
+    <main class="hero">
+        <picture>
+            <source srcset="images/barcelona-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/barcelona-medium.webp" media="(min-width: 550px)">
+            <img src="images/barcelona-small.webp" alt="Picture of Barcelona" width="400" height="200">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <p>Area: 38-39 sq mil</p>
+            <p>Population: 7.13 million</p>
+            <p>Capital: Catalonia</p>
+            <p>Language: </p>
+            <p>Currency: Euro (€)</p>
+            <p>Time zone: CET (UTC+1)</p>
+            <p>Calling Code: +34 (Spain)</p>
+            <p>Internet TLD: .es (also .cat and .barcelona)</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather </h2>
+            <p>Temperature: 15°C -18°C</p>
+            <p>Condition: Mostly sunny, Breezy, and clear to partly cloudy</p>
+            <p>Wind; West(W) or South-SouthWest(SSW)</p>
+            <p>Wind Chill: 10°C -15°C during the day</p>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            © <span id="currentYear"></span>🌺Osaruyi Kingsley Osawaru🌺Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
