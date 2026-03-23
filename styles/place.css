@@ -54,8 +54,7 @@ footer{
     right: 10px;
 }
 
-.weather h2, .data h2{
-    margin: 0 auto 0.6rem auto;
+.weather h2, .data h2{ 
     text-align: center;
     background-color: #2e8b57;
     padding: .5rem;
