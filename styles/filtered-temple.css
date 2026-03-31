@@ -71,7 +71,7 @@ nav ul li a{
     padding: 10px;
     border: 2px solid rgb(0,0,0,0.1);
     border-radius: 8px;
-    background-color: lemonchiffon;
+    
     
 }
 
@@ -96,6 +96,7 @@ nav ul li a{
     #templeGallery figcaption{
         padding: 0.7rem;
         font-size: .8rem;
+        background-color: beige;
     }
 
     footer{
@@ -105,7 +106,7 @@ nav ul li a{
         height: 100px;
         justify-content: center;
         align-items: center;
-        margin:10px 10px;
+        margin:15px 15px;
 
         
     }
