@@ -14,17 +14,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!--Css reference-->
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/filtered-temple.css">
+    <link rel="stylesheet" href="styles/filtered-temple-small.css">
 
-    <!-- JavaScript reference -->
-    <script src="scripts/filtered-temple.js" defer></script>
+    
 </head>
 <body>
     <header>
         <div class="top">
             <h1>Temple Album</h1>
-            <button id="menu">☰</button>
+            <button id="menu" aria-label="Menu">☰</button>
         </div>
         <nav>
             <ul id="navMenu">
@@ -38,16 +37,18 @@
 
     </header>
     <main>
-        <h2>Home</h2>
+        <h2 id="pageTitle">Home</h2>
         <section id="templeGallery"></section>
 
     </main>
     <footer>
          <p>
-        © <span id="currentyear"></span> ✨ Osaruyi Kingsley Osawaru ✨ Nigeria
+        © <span id="currentYear"></span> ✨ Osaruyi Kingsley Osawaru ✨ Nigeria
         </p>
 
         <p id="lastModified"></p>
     </footer>
+    <!-- JavaScript reference -->
+<script src="scripts/filtered-temple.js" defer></script>
 </body>
 </html>

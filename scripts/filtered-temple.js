@@ -1,3 +1,17 @@
+const menuButton = document.querySelector("#menu");
+const navigationMenu = document.querySelector("#navMenu");
+
+menuButton.addEventListener("click", function(){
+navigationMenu.classList.toggle("open");
+});
+
+const year = new Date().getFullYear();
+
+document.getElementById("currentYear").textContent = year;
+
+document.getElementById("lastModified").textContent =
+"Last Modified: " + document.lastModified;
+
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -61,7 +75,7 @@ const temples = [
     dedicated: "2024, August, 17",
     area: 10.6,
     imageUrl:
-    "https://churchofjesuschristtemples.org/austin-texas-temple/photographs/"
+    "https://churchofjesuschristtemples.org/assets/img/temples/austin-texas-temple/austin-texas-temple-40361-main.jpg"
   },
   {
     templeName: "Birmingham Alabama Temple",
@@ -73,18 +87,22 @@ const temples = [
   },
 
   {
-    templeName:"Brasilia Brazil Temple",
-    location: "Módulo C Asa Norte",
-    dedicated:"2020,September, 26",
-    area:5.6,
-    imageUrl:
-    "https://churchofjesuschristtemples.org/brasilia-brazil-temple/photographs/"
+    templeName: "Brasilia Brazil Temple",
+  location: "Módulo C Asa Norte",
+  dedicated: "2020, September, 26",
+  area: 5.6,
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/brasilia-brazil-temple/brasilia-brazil-temple-39184-main.jpg"
   }
 ];
 
 function acresToFt(acres) {
     return acres * 43560;
 }
+
+function getArea(area) {
+    return area < 1000 ? acresToFt(area) : area;
+}
+
 function createTempleSelection(temple) {
     const figure = document.createElement("figure");
     
@@ -99,7 +117,7 @@ function createTempleSelection(temple) {
     `<strong>${temple.templeName}</strong><br>
     Location: ${temple.location}<br>
     Dedicated: ${temple.dedicated}<br>
-    Area:${acresToFt(temple.area).toLocaleString()} ft`;
+    Area: ${getArea(temple.area).toLocaleString()} ft²`;
     
     figure.appendChild(img);
     figure.appendChild(figcaption);
@@ -115,7 +133,7 @@ function displayTemples(templesArray) {
     });
 }
 
-function filterTemple(filter) {
+function filterTemples(filter) {
     switch (filter) {
         case "old":
             return temples.filter(t => parseInt(t.dedicated.split(",")[0]) <1900);
@@ -125,15 +143,30 @@ function filterTemple(filter) {
             return temples.filter(t => acresToFt(t.area) > 90000); 
         case "small":
             return temples.filter(t => acresToFt(t.area) < 10000);
+        case "home":
         default:
             return temples;
     }
 }
 
-const navMenu = document.getElementById(navMenu);
+const navMenu = document.getElementById("navMenu");
+const pageTitle = document.getElementById("pageTitle");
+
 navMenu.addEventListener("click", (e) => {
     e.preventDefault();
-})
+
+    if (e.target.tagName ==="A") {
+        const filter = e.target.dataset.filter;
+
+        pageTitle.textContent = filter.charAt(0).toUpperCase() + filter.slice(1);
+        const filteredTemples = filterTemples(filter);
+        displayTemples(filteredTemples);
+    }
+});
+
+displayTemples(temples);
+
+
 
 
 
