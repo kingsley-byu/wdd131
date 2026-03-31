@@ -83,6 +83,8 @@ nav ul li a{
         box-shadow: 0 20px 50px rgb(0,0,0,0.1);
         overflow: hidden;
         margin: 0;
+        position: relative;
+        overflow: hidden;
         
         
     }
@@ -90,13 +92,20 @@ nav ul li a{
         width: 100%;
         height: 300px;
         object-fit: cover;
+        display: block;
         
         
     }
     #templeGallery figcaption{
-        padding: 0.7rem;
+        padding: 0.8rem;
         font-size: .8rem;
         background-color: beige;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        
     }
 
     footer{
