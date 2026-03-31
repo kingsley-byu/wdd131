@@ -1,4 +1,5 @@
 
+
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -113,8 +114,6 @@ nav ul li a{
         background-color: rgb(135, 102, 102);
         border-radius: 8px;
         height: 100px;
-        justify-content: center;
-        align-items: center;
         margin:15px 15px;
 
         
