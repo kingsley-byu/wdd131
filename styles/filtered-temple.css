@@ -99,7 +99,7 @@ nav ul li a{
     #templeGallery figcaption{
         padding: 0.8rem;
         font-size: .8rem;
-        background-color: beige;
+        background-color:rgb(220, 232, 232);
         position: absolute;
         top: 0;
         left: 0;
@@ -109,7 +109,7 @@ nav ul li a{
     }
 
     footer{
-        color: white;
+        color: rgba(255, 255, 255);
         background-color: rgb(135, 102, 102);
         border-radius: 8px;
         height: 100px;
