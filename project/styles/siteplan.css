@@ -1,0 +1,52 @@
+:root{
+            --flame:#e8400c;
+            --amber: #967a4e;
+            --cream: #ffff;
+            --charcoal: #676060;
+            --color: #ffffff8c;
+        }
+
+
+        header{
+            background-color: var(--amber);
+            color: var(--cream);
+        }
+        .card{
+            padding: 30px;
+            border-radius: 20px;
+        }
+        
+        .card-header{
+            border: 1px solid var(--amber) ;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: var(--cream);
+            color: var();
+            margin: 30px 30px;
+            text-align: center;
+            
+            
+        }
+
+    .card-header h2{
+        background-color: var(--color);
+        border: 1px solid var(--amber);
+        margin-top: 0;
+        text-align: center;
+        padding: 5px;
+        
+
+    }
+    .card-header p{
+        padding: 10px;
+        border: 1px solid var(--amber);
+        margin: 30px;
+        border-radius: 10px;
+    }
+    header {
+        text-align: center;
+    }
+    header span h1{
+        color: var(--flame);
+    }
+        
