@@ -25,10 +25,10 @@
         <form method="get" action="review.html" class="wf1">
 
             <div class="product-container">
-                <label><strong>Product name</strong>*<select id="choice" name="subject" required>
+                <label><strong>Product name</strong>*</label><select id="choice" name="subject" required>
                     <option value="" disabled selected>select a product...</option>
                 </select>
-                </label>
+                
             </div>
 
             <label><strong>Overall Rating*</strong></label>
@@ -65,7 +65,8 @@
             </div>
 
             <div id="dateInstalled">
-                <label><strong>Date of Installation</strong><input type="date" id="installation" name="dateInstalled" value="date"></label>
+                <label for="installation"><strong>Date of Installation</strong></label>
+                <input type="date" id="installation" name="dateInstalled" value="date">
             </div>
 
             <div class="checkbox-group">
