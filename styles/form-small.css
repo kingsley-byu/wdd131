@@ -1,0 +1,121 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: #1f2937; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Form */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.wf1 {
+     
+    background-color: #e5e7eb; 
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+.wf1 input,
+.wf1 select,
+.wf1 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* ✅ IMPORTANT */
+}
+
+/* Remove full width from checkbox */
+.wf1 input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Checkbox fix */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px;
+}
+
+/* Textarea */
+textarea {
+    height: 80px;
+}
+
+/* Star rating */
+.star-option {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.star-option div {
+    text-align: center;
+}
+
+.star-option input {
+    display: none;
+}
+
+.star-option label {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.star-option input:checked + label {
+    background-color: #333;
+}
+
+/* Button */
+.submit-btn {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #e6e6e6;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #1f2937;   
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

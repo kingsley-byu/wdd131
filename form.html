@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD131 - Dynamic Web Fundamentals">
+    <meta name="author" content="Osaruyi Kingsley Osawaru"> 
+    <title>HTML form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--Css reference-->
+    <link rel="stylesheet" href="styles/form-small.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+
+    <!-- JavaScript reference -->
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="wf1">
+
+            <div class="product-container">
+                <label><strong>Product name</strong>*<select id="choice" name="subject" required>
+                    <option value="">select a product...</option>
+                </select>
+                </label>
+            </div>
+
+            <label><strong>Overall Rating</strong></label>
+<div class="star-option">
+    <div>
+        <span>★</span>
+        <input type="radio" id="onestar" name="stars" value="1">
+        <label for="onestar"></label>
+    </div>
+
+    <div>
+        <span>★★</span>
+        <input type="radio" id="twostar" name="stars" value="2">
+        <label for="twostar"></label>
+    </div>
+
+    <div>
+        <span>★★★</span>
+        <input type="radio" id="threestar" name="stars" value="3">
+        <label for="threestar"></label>
+    </div>
+
+    <div>
+        <span>★★★★</span>
+        <input type="radio" id="fourstar" name="stars" value="4">
+        <label for="fourstar"></label>
+    </div>
+
+    <div>
+        <span>★★★★★</span>
+        <input type="radio" id="fivestar" name="stars" value="5">
+        <label for="fivestar"></label>
+    </div>
+</div>
+
+            <div id="dateInstalled">
+                <label><strong>Date of Installation</strong><input type="date" name="dateInstalled"></label>
+            </div>
+
+            <div class="checkbox-group">
+                <p>Which features did you find useful in the product?<br>(Check all that apply)</p>
+                <label><input type="checkbox" name="durability"> Durability</label>
+                <label><input type="checkbox" name="Ease"> Ease of Use</label>
+                <label><input type="checkbox" name="performance"> Performance</label>
+                <label><input type="checkbox" name="design"> Design</label>
+            </div>
+
+            <div class="text-field">
+                <label><strong> Review(Optional)</strong><textarea name="review"></textarea></label>
+            </div>
+            <div class="yourName">
+                <label><strong>Your Name(Optional)</strong><input type="text" name="name"></label>
+            </div>
+
+        
+            <input class="submit-btn" type="submit" value="Post Review">
+            
+
+        </form>
+    </main>
+    <footer>
+         <p>
+        © <span id="currentYear"></span> ✨ Osaruyi Kingsley Osawaru ✨ Nigeria
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

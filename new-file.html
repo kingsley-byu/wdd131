@@ -1,0 +1,49 @@
+<h1>HTML Form Element Examples</h1>
+<label for="alpha">INPUT: text, required, pattern(alpha characters only), with CSS valid and invalid pseudo-classes</label>
+<input type="text" id="alpha" name="alpha" required pattern="[A-Za-z]*">
+<hr>
+
+<label for="fruit">INPUT: text, required, datalist - <br>What's your favorite fruit? <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+<input type="text" id="fruit" name="fruit" list="l1" required>
+<hr>
+
+<label for="r">INPUT: range, min, max, datalist, required</label>
+<div id="rangevalue">0</div>
+<input type="range" id="r" name="r" min="0" max="5" value="0" step="1" list="rangevalues">
+<datalist id="rangevalues">
+	<option value="0">0</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+</datalist>
+<div class="ref">
+	<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range">MDN Input: Range</a>
+</div>
+<hr>
+
+<label>INPUT: radio, required, common name, altered look with CSS stars</label>
+<div class="stars">
+	<input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+	<input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+	<input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+	<input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+	<input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+</div>
+<div class="ref"><a href="https://codepen.io/nevkatz/pen/OJPBBpL" target="_blank">Star Rating Source Pen</a></div>
+<hr>
+<div class="vcentered">
+	<label for="task" data-content="Completed the Module" class="inline">INPUT: checkbox, CSS size</label>
+	<input type="checkbox" id="task" name="task" value="task">
+</div>
+<div class="ref"><a href="https://codepen.io/kathykato/pen/xxGObEp">CheckBox Line Through Source</a></div>
+
+<datalist id="l1">
+	<option>Banana</option>
+	<option>Cherry</option>
+	<option>Apple</option>
+	<option>Strawberry</option>
+	<option>Lemon</option>
+	<option>Orange</option>
+</datalist>
