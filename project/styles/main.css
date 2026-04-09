@@ -132,8 +132,13 @@ body{
     flex-direction: row;
     gap: .75rem;
     align-items: stretch;
+    justify-content:center;
+    margin: 0 auto;
+    max-width: 900px
 }
 .step {
+    flex: 1;
+    max-width: 280px;
     padding: 2rem 1rem;
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -155,6 +160,18 @@ footer a {
 
 footer a:hover {
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 549px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /*-------------------TABLET---------------------*/
