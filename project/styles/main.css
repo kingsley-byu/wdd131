@@ -8,7 +8,7 @@
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -18,36 +18,43 @@ header{
     padding: 1rem 2rem;
     justify-content: space-between;
     display: flex;
-    height: 6rem;
+    height: 9rem;
+    align-items: center;
+    
     
 }
 header h1{
     color: var(--secondary-color);
-    font-size: 2.5rem;
-    text-align: center;
+     
     
 }
+header h1 img{
+    width: 200px;
+    height: 53px;
+}
+
 
 nav ul{
     display: flex;
     flex-direction: row;
     gap: 2rem;
     list-style: none;
-    
-    
+    font-weight: bolder;   
     
 }
 nav a{
     color: var(--white);
     text-decoration: none;  
-    font-size: 1.5rem;
+    font-size: 1rem;
+    
+    
 }
 nav a:hover{
     color: var(--secondary-color);
 }
 
 body{
-    background-color: var(--bg-color);
+    background-color: var(--white);
     color: var(--text-color);
     font-family: 'DM Sans', sans-serif;
 }
@@ -98,12 +105,16 @@ body{
 .category-grid {
     display: grid;
     grid-template-columns: 1fr;
+    
 }
 
 .category-card{
     background-color: var(--white);
     border-radius:  10px;
     overflow: hidden;
+    border: 1px solid var(--text-color);
+    margin: .5rem .5rem;
+    
 }
 
 .category-card img {
@@ -190,4 +201,14 @@ footer a:hover {
     .hero h2 {
         font-size: 3.5rem;
     }
+
+    .categories{
+    padding: 3rem 5rem;
+
+    }
+    header h1 img{
+    width: 400px;
+    height: 100px;
+    
+}
 }
