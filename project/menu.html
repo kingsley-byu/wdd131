@@ -20,9 +20,10 @@
              <h1>
                 <img src="images/mealdash-logo.svg" alt="mealDash-logo">
              </h1>
-         <nav>
+             <button id="menu-btn" arial-label="Toggle navigation">☰</button>
+         <nav id="main-nav">
             <ul>
-                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="order.html">Order</a></li>
             </ul>
@@ -34,15 +35,15 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <picture>
-                        <source srcset="" media="(min-width: 1000px)">
-                        <source srcset="" media="(min-width: 550px)">
-                        <img src="images/" alt="" width="300" height="200" loading="lazy">
+                        <source srcset="images/burger-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/burger-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/burger-small-image.webp" alt="burger" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
                         <h3>Cheeseburger</h3>
                         <p>Juicy beef patty with melted cheese and fresh veggies.</p>
                         <p class="price">$5.99</p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <button class="add-to-cart" data-name="Cheeseburger" data-price="5.99">Add to Cart</button>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -52,17 +53,31 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Chicken Sandwiches</h3>
+                        <p>Crispy fried chicken fillet with creamy coleslaw and pickles on a toasted brioche bun.</p>
+                        <p class="price">$5.49</p>
+                        <button class="add-to-cart" data-name="Chicken Sandwiches" data-price="5.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="chinese">
-            <h2></h2>
+            <h2>Chinese</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/chines-food-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/chines-food-medium.webp" media="(min-width: 550px)">
+                        <img src="images/chinese-food-small.webp" alt="" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Fried Rice</h3>
+                        <p>Classic Chinese fried rice stir-fried with eggs, mixed vegetables, soy sauce, and sesame oil.</p>
+                        <p class="price">$6.99</p>
+                        <button class="add-to-cart" data-name="Fried Rice" data-price="6.99">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -70,10 +85,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Spring Rolls</h3>
+                        <p>Crispy golden rolls filled with seasoned vegetables and served with a sweet chili dipping sauce.</p>
+                        <p class="price">$5.99</p>
+                        <button class="add-to-cart" data-name="Spring Rolls" data-price="5.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -81,8 +96,21 @@
         </section>
 
         <section id="italian">
-            <h2></h2>
+            <h2>Italian</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/italian-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/italian-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/italian-small-image.webp" alt="italian dishes" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Spaghetti Bolognese</h3>
+                        <p> Al dente spaghetti topped with a rich slow-cooked beef and tomato ragù sauce.</p>
+                        <p class="price">$8.99</p>
+                        <button class="add-to-cart" data-name="Spaghetti Bolognese" data-price="8.99">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -90,10 +118,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Lasagna</h3>
+                        <p>Layers of pasta, creamy béchamel, and hearty meat sauce baked to golden perfection.</p>
+                        <p class="price">$9.49</p>
+                        <button class="add-to-cart" data-name="Lasagna" data-price="9.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -101,8 +129,21 @@
         </section>
 
         <section id="international">
-            <h2></h2>
+            <h2>International</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/international-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/international-medium.webp" media="(min-width: 550px)">
+                        <img src="images/international-small.webp" alt="" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Shawarma</h3>
+                        <p>Tender seasoned chicken wrapped in soft flatbread with garlic sauce, vegetables, and pickles.</p>
+                        <p class="price">$6.49</p>
+                        <button class="add-to-cart" data-name="Shawarma" data-price="6.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -110,10 +151,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Tacos</h3>
+                        <p>Soft corn tortillas filled with spiced beef, salsa, guacamole, and shredded cheese.</p>
+                        <p class="price">$5.99</p>
+                        <button class="add-to-cart" data-name="Tacos" data-price="5.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -121,8 +162,21 @@
         </section>
 
         <section id="rice">
-            <h2></h2>
+            <h2>Rice</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/rice-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/rice-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/rice-small-image.webp" alt="rice image" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Jollof Rice</h3>
+                        <p>Smoky Nigerian-style jollof rice cooked in a rich tomato and pepper sauce, served with sides.</p>
+                        <p class="price">$7.49</p>
+                        <button class="add-to-cart" data-name="Jollof Rice" data-price="7.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -130,10 +184,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Penne Arrabbiata</h3>
+                        <p>Penne pasta tossed in a spicy tomato and garlic sauce, finished with fresh parsley.</p>
+                        <p class="price">$7.99</p>
+                        <button class="add-to-cart" data-name="Penne Arrabbiata" data-price="7.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -141,8 +195,21 @@
         </section>
 
         <section id="pizza">
-            <h2></h2>
+            <h2>Pizza</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/pizza-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/pizza-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/pizza-small-image.webp" alt="image of pizza" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Classic tomato base topped with generous pepperoni slices and melted mozzarella cheese.</p>
+                        <p class="price">$11.99</p>
+                        <button class="add-to-cart" data-name="Pepperoni Pizza" data-price="11.99">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -150,19 +217,32 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Margherita Pizza</h3>
+                        <p> Simple and delicious with fresh tomato sauce, mozzarella, and fragrant basil leaves.</p>
+                        <p class="price">$10.49</p>
+                        <button class="add-to-cart" data-name="Margherita Pizza" data-price="10.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <section id="nigerian-dishes">
-            <h2></h2>
+        <section id="nigeria-dishes">
+            <h2>Nigerian Dishes</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/nigerian-food-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/nigerian-food-medium.webp" media="(min-width: 550px)">
+                        <img src="images/nigerian-food-small.webp" alt="Nigerian dishes" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Egusi Soup</h3>
+                        <p>Rich and hearty melon seed soup cooked with assorted meat, fish, and leafy greens.</p>
+                        <p class="price">$8.49</p>
+                        <button class="add-to-cart" data-name="Egusi Soup" data-price="8.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -170,10 +250,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Ogbono Soup</h3>
+                        <p> Thick and delicious draw soup made from ground ogbono seeds with assorted meat and stockfish.</p>
+                        <p class="price">$8.49</p>
+                        <button class="add-to-cart" data-name="Ogbono Soup" data-price="8.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -181,8 +261,21 @@
         </section>
 
         <section id="drinks">
-            <h2></h2>
+            <h2>Drinks</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/drink-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/drink-medium.webp" media="(min-width: 550px)">
+                        <img src="images/drink-small.webp" alt="drinks" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Chapman</h3>
+                        <p>Nigeria's favorite chilled cocktail made with Fanta, Sprite, grenadine, and fresh cucumber</p>
+                        <p class="price">$3.49</p>
+                        <button class="add-to-cart" data-name="Chapman" data-price="3.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -190,10 +283,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Chocolate Ice Cream</h3>
+                        <p>Creamy rich chocolate ice cream made with premium cocoa, served in a waffle cone</p>
+                        <p class="price">$3.99</p>
+                        <button class="add-to-cart" data-name="Chocolate Ice Cream" data-price="3.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -201,8 +294,21 @@
         </section>
 
         <section id="grill">
-            <h2></h2>
+            <h2>Grill</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/grill-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/grill-medium.webp" media="(min-width: 550px)">
+                        <img src="images/grill-small.webp" alt="grill" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Grilled Chicken</h3>
+                        <p> Tender whole chicken marinated in herbs and spices, grilled over an open flame to perfection.</p>
+                        <p class="price">$9.99</p>
+                        <button class="add-to-cart" data-name="Grilled Chicken" data-price="9.99">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -210,10 +316,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Suya</h3>
+                        <p>Nigerian street-food classic — thinly sliced beef skewers coated in spicy yaji spice mix and grilled.</p>
+                        <p class="price">$6.99</p>
+                        <button class="add-to-cart" data-name="Suya" data-price="6.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -221,8 +327,21 @@
         </section>
 
         <section id="japanese">
-            <h2></h2>
+            <h2>Japanese</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/japanese-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/japanese-medium.webp" media="(min-width: 550px)">
+                        <img src="images/japanese-small.webp" alt="japanese dishes" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Sushi Roll</h3>
+                        <p>Fresh salmon and avocado wrapped in seasoned rice and nori, served with soy sauce and wasabi.</p>
+                        <p class="price">$12.99</p>
+                        <button class="add-to-cart" data-name="Sushi Roll" data-price="12.99">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -230,10 +349,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Ramen</h3>
+                        <p>Rich pork broth noodle soup topped with soft-boiled egg, chashu pork, nori, and green onions.</p>
+                        <p class="price">$11.49</p>
+                        <button class="add-to-cart" data-name="Ramen" data-price="11.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -241,8 +360,21 @@
         </section>
 
         <section id="chicken">
-            <h2></h2>
+            <h2>Chicken</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/chicken-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/chicken-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/chicken-small-image.webp" alt="" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Fried Chicken</h3>
+                        <p> Crispy golden fried chicken seasoned with a blend of herbs and spices, juicy on the inside.</p>
+                        <p class="price">$12.00</p>
+                        <button class="add-to-cart" data-name="Fried Chicken" data-price="12.00">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -250,10 +382,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Chicken Wings</h3>
+                        <p>Saucy buffalo chicken wings tossed in a tangy hot sauce, served with blue cheese dip.</p>
+                        <p class="price">$11.49</p>
+                        <button class="add-to-cart" data-name="Chicken Wings" data-price="11.49">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -261,8 +393,21 @@
         </section>
 
         <section id="bakery">
-            <h2></h2>
+            <h2>Bakery</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/bakery-large-image.webp" media="(min-width: 1000px)">
+                        <source srcset="images/bakery-medium-image.webp" media="(min-width: 550px)">
+                        <img src="images/bakery-small-image.webp" alt="" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Meat Pie</h3>
+                        <p> Nigerian-style shortcrust pastry filled with seasoned minced beef, potatoes, and carrots.</p>
+                        <p class="price">$2.49</p>
+                        <button class="add-to-cart" data-name="Meat Pie" data-price="2.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -270,10 +415,10 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Croissant</h3>
+                        <p>Buttery and flaky French croissant baked fresh daily, perfect on its own or with jam.</p>
+                        <p class="price">$2.99</p>
+                        <button class="add-to-cart" data-name="croissant" data-price="2.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -281,8 +426,21 @@
         </section>
 
         <section id="breakfast">
-            <h2></h2>
+            <h2>Breakfast</h2>
             <div class="menu-grid">
+                <div class="menu-item">
+                    <picture>
+                        <source srcset="images/breakfast-large.webp" media="(min-width: 1000px)">
+                        <source srcset="images/breakfast-medium.webp" media="(min-width: 550px)">
+                        <img src="images/breakfast-small.webp" alt="" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="menu-item-info">
+                        <h3>Pancakes</h3>
+                        <p>Fluffy stacked pancakes drizzled with maple syrup and served with fresh seasonal berries.</p>
+                        <p class="price">$6.49</p>
+                        <button class="add-to-cart" data-name="Pancakes" data-price="6.49">Add to Cart</button>
+                    </div>
+                </div>
                 <div class="menu-item">
                     <picture>
                         <source srcset="" media="(min-width: 1000px)">
@@ -290,24 +448,26 @@
                         <img src="images/" alt="" width="300" height="200" loading="lazy">
                     </picture>
                     <div class="menu-item-info">
-                        <h3></h3>
-                        <p></p>
-                        <p class="price"></p>
-                        <button class="add-to-cat">Add to Cart</button>
+                        <h3>Omelette</h3>
+                        <p>Light and golden three-egg omelette filled with cheese, mushrooms, peppers, and onions.</p>
+                        <p class="price">$5.99</p>
+                        <button class="add-to-cart" data-name="Omelette" data-price="5.99">Add to Cart</button>
                     </div>
                 </div>
             </div>
 
         </section>
 
-
-
-
-
-
     </main>
     <footer>
+        <p>
+        © <span id="currentyear"></span> ✨ Osaruyi Kingsley Osawaru ✨ Nigeria
+        </p>
 
+        <p id="lastModified"></p>
+        <a href="references.html">References</a>
     </footer>
+    <script src="scripts/main.js" defer></script>
+ 
 </body>
 </html>
