@@ -117,3 +117,57 @@ if (clearCartBtn) {
         displayCart();
     });
 }
+
+// ── ORDER FORM ──
+
+const orderForm = document.querySelector('#order-form');
+const orderConfirmation = document.querySelector('#order-confirmation');
+const confirmationName = document.querySelector('#confirmation-name');
+const confirmationTotal = document.querySelector('#confirmation-total');
+
+if (orderForm) {
+    orderForm.addEventListener('submit', (e) => {
+        // Stop page from refreshing
+        e.preventDefault();
+
+        // Check cart is not empty before submitting
+        if (cart.length === 0) {
+            alert('Your cart is empty! Please add items before placing an order.');
+            return;
+        }
+
+        // Get form values
+        const fullname = document.querySelector('#fullname').value.trim();
+        const email = document.querySelector('#email').value.trim();
+        const phone = document.querySelector('#phone').value.trim();
+        const address = document.querySelector('#address').value.trim();
+        const deliveryMethod = document.querySelector('#delivery-method').value;
+        const payment = document.querySelector('#payment').value;
+
+        // Validate phone number - must be at least 7 digits
+        const phoneRegex = /^\d{7,}$/;
+        if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+            alert('Please enter a valid phone number with at least 7 digits.');
+            return;
+        }
+
+        // Calculate final total
+        const total = cart.reduce((sum, item) => 
+            sum + (item.price * item.quantity), 0);
+
+        // Show confirmation message using template literals
+        confirmationName.textContent = `Name: ${fullname}`;
+        confirmationTotal.textContent = `Order Total: $${total.toFixed(2)}`;
+
+        // Hide form and show confirmation
+        orderForm.closest('section').style.display = 'none';
+        orderConfirmation.classList.remove('hidden');
+
+        // Clear cart after successful order
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Scroll to confirmation
+        orderConfirmation.scrollIntoView({ behavior: 'smooth' });
+    });
+}
