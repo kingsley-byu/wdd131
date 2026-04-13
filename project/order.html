@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MealDash - Place your order fast and fresh.">
+    <meta name="author" content="Osaruyi Kingsley Osawaru">
+    <title>MealDash - Order</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="order-page">
+    <header>
+        <h1>
+            <img src="images/mealdash-logo.svg" alt="MealDash logo" >
+        </h1>
+        <button id="menu-btn" aria-label="Toggle navigation">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ── CART SECTION ── -->
+        <section class="cart-section">
+            <h2>Your Cart</h2>
+
+            <!-- Empty cart message -->
+            <div id="empty-cart-message">
+                <p>Your cart is empty. <a href="menu.html">Browse the menu</a> to add items.</p>
+            </div>
+
+            <!-- Cart items - JavaScript will populate this -->
+            <div id="cart-items"></div>
+
+            <!-- Cart total -->
+            <div class="cart-total">
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <button id="clear-cart-btn">Clear Cart</button>
+            </div>
+        </section>
+
+        <!-- ── ORDER FORM SECTION ── -->
+        <section class="order-form-section">
+            <h2>Delivery Details</h2>
+
+            <form id="order-form">
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="Enter your full name"
+                        required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label for="address">Delivery Address*</label>
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="3"
+                        placeholder="Enter your delivery address"
+                        required></textarea>
+                </div>
+
+                <!-- Delivery Method -->
+                <div class="form-group">
+                    <label for="delivery-method">Delivery Method*</label>
+                    <select id="delivery-method" name="delivery-method" required>
+                        <option value="" disabled>-- Select a delivery method --</option>
+                        <option value="standard">Standard Delivery (2-3 hours) - $2.99</option>
+                        <option value="express">Express Delivery (1 hour) - $5.99</option>
+                        <option value="pickup">Pick Up In Store - Free</option>
+                    </select>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="form-group">
+                    <label for="payment">Payment Method*</label>
+                    <select id="payment" name="payment" required>
+                        <option value="" disabled>-- Select payment method --</option>
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="cash">Cash on Delivery</option>
+                        <option value="transfer">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <!-- Special Instructions -->
+                <div class="form-group">
+                    <label for="instructions">Special Instructions (optional)</label>
+                    <textarea
+                        id="instructions"
+                        name="instructions"
+                        rows="3"
+                        placeholder="Any special requests or instructions?"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="place-order-btn">Place Order</button>
+
+            </form>
+        </section>
+
+        <!-- ── ORDER CONFIRMATION ── -->
+        <section id="order-confirmation" class="hidden">
+            <div class="confirmation-box">
+                <h2>🎉 Order Placed Successfully!</h2>
+                <p>Thank you for your order. Your meal is being prepared and will be delivered shortly.</p>
+                <p id="confirmation-name"></p>
+                <p id="confirmation-total"></p>
+                <a href="menu.html">Order More Food</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © <span id="currentyear"></span> ✨ Osaruyi Kingsley Osawaru ✨ Nigeria
+        </p>
+        <p id="lastModified"></p>
+        <a href="references.html">References</a>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>
