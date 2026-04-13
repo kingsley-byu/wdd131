@@ -630,3 +630,47 @@ footer a:hover {
         max-width: 700px;
     }
 }
+
+/* ── REFERENCES PAGE ── */
+.references-section {
+    padding: 3rem 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.references-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.references-section h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 1.5rem 0 0.75rem;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 0.75rem;
+}
+
+.references-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.references-section ul li {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.references-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.references-section a:hover {
+    text-decoration: underline;
+}
